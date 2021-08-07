@@ -1,8 +1,12 @@
 import React from 'react'
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 function SmallCard({img, distance, location}) {
     return (
+        <motion.button
+    whileHover={{ scale: 1.1}}
+    whileTap={{ scale: 0.9 }}>
         <div className="flex animate-pulse hover:animate-none items-center m-2 mt-5 space-x-4 rounded-xl cursor-pointer hover:bg-gray-100 hover:scale-105 transition transform duration-200 ease-out">
             {/* Left */}
             <div className='relative h-16 w-16 '>
@@ -15,6 +19,8 @@ function SmallCard({img, distance, location}) {
              </div>
             
         </div>
+    </motion.button>
+        
     )
 }
 

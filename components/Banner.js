@@ -30,7 +30,12 @@ function Banner() {
                 </div>
             </Carousel>
             <div className="absolute top-1/2 w-full text-center">
-                        <motion.div initial="hidden" animate="visible" variants={{
+            <motion.button
+                whileHover={{ scale: [1, 1.5, 1.5, 1, 1],
+                            rotate: [0, 0, 270, 270, 0],
+                            borderRadius: ["20%", "20%", "50%", "50%", "20%"],}}
+                whileTap={{ scale: 0.9 }}>
+                    <motion.div initial="hidden" animate="visible" variants={{
                         hidden: {
                             scale: .8,
                             opacity: 0
@@ -46,6 +51,9 @@ function Banner() {
                         <p className=" font-black text-sm sm:text-6xl subpixel-antialiased  text-black-400"> Not sure where to go? Perfect</p>
                         <button className=" text-purple-500 bg-red-400 px-10 py-4 shadow-md  rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150"> I`m Flexible</button>
                         </motion.div>
+
+                </motion.button>
+                        
                         
                     </div>
 

@@ -15,14 +15,21 @@ function InfoCard({ img, location, title, description, star, price, total }) {
       }
     }}>
       <div className=" hover:border-red-500 border-8 flex py-7 px-2 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t ">
-      <div className="relative h-24 w-40 md:h-52 md:w-80 flex- shrink-0">
-        <Image
-          src={img}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-2xl"
-        />
-      </div>
+      <motion.button
+                whileHover={{ scale: [1, 1.5, 1.5, 1, 1],
+                            rotate: [0, 0, 270, 270, 0],
+                            borderRadius: ["20%", "20%", "50%", "50%", "20%"],}}
+                whileTap={{ scale: 0.9 }}> 
+                <div className="relative h-24 w-40 md:h-52 md:w-80 flex- shrink-0">
+                    <Image
+                      src={img}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-2xl"
+                    />
+                    </div>
+                </motion.button>
+      
 
       <div className="flex flex-col flex-grow pl-5">
         <div className="flex justify-between">
