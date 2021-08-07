@@ -43,8 +43,8 @@ function Banner() {
                             }
                         }
                         }}>
-                        <p className=" font-black text-sm sm:text-6xl subpixel-antialiased  text-red-400"> Not sure where to go? Perfect</p>
-                        <button className="text-purple-500 bg-white px-10 py-4 shadow-md  rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150"> I`m Flexible</button>
+                        <p className=" font-black text-sm sm:text-6xl subpixel-antialiased  text-black-400"> Not sure where to go? Perfect</p>
+                        <button className=" text-purple-500 bg-red-400 px-10 py-4 shadow-md  rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150"> I`m Flexible</button>
                         </motion.div>
                         
                     </div>

@@ -47,7 +47,7 @@ export default function Header({ placeholder }) {
                     {/* Left */}
                     <div 
                     onClick= {() => router.push('/')} 
-                    className=" animate-bounce relative flex items-center h-10 cursor-pointer my-auto ">
+                    className="relative flex items-center h-10 cursor-pointer my-auto ">
                         <Image src="https://links.papareact.com/qd3" 
                         layout='fill' 
                         objectFit="contain"
