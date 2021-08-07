@@ -4,8 +4,7 @@ import Footer from '../components/Footer'
 import { useRouter } from 'next/dist/client/router'
 import { format } from 'date-fns';
 import InfoCard from '../components/InfoCard';
-import { AnimateSharedLayout } from "framer-motion"
-import { motion } from "framer-motion" 
+import Map from '../components/Map';
 
 function search({ searchResults }) {
     const router = useRouter();
@@ -32,8 +31,7 @@ function search({ searchResults }) {
                         <p className="button">More Filters</p>
                     </div>
                     <div className="flex flex-col">
-                        <AnimateSharedLayout>
-                        <motion.ul layout> 
+                        
                                 {searchResults.map(
                                 ({ img, location, title, description, star, price, total }) => (
                                     <InfoCard
@@ -48,9 +46,11 @@ function search({ searchResults }) {
                                     />
                                 )
                                 )}
-                            </motion.ul>
-                        </AnimateSharedLayout>
+                          
                     </div>
+                </section>
+                <section className="hidden xl:inline-flex min-w-[600px]">
+                    < Map searchResults ={searchResults} />
                 </section>
             </main>
 

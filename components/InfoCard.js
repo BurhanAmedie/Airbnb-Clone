@@ -2,10 +2,19 @@ import React from "react";
 import Image from "next/image";
 import { HeartIcon } from "@heroicons/react/outline";
 import { StarIcon } from "@heroicons/react/solid";
+import { motion } from "framer-motion"
 
 function InfoCard({ img, location, title, description, star, price, total }) {
   return (
-    <div className=" hover:border-red-500 border-8 flex py-7 px-2 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t ">
+    <motion.div whileHover={{
+      scale: 0.9,
+      position: 'relative',
+      zIndex: 0.5,
+      transition: {
+        duration: 0.2
+      }
+    }}>
+      <div className=" hover:border-red-500 border-8 flex py-7 px-2 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t ">
       <div className="relative h-24 w-40 md:h-52 md:w-80 flex- shrink-0">
         <Image
           src={img}
@@ -39,6 +48,8 @@ function InfoCard({ img, location, title, description, star, price, total }) {
         </div>
       </div>
     </div>
+    </motion.div>
+    
   );
 }
 
