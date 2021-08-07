@@ -42,7 +42,7 @@ export default function Header({ placeholder }) {
         });
       };
     return (
-        <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md py-5 px-5 md:px-10">
+        <header className="sticky top-0 z-50 grid grid-cols-3 bg-indigo-600 bg-opacity-10 shadow-md py-5 px-5 md:px-10">
                
                     {/* Left */}
                     <div 
@@ -93,10 +93,10 @@ export default function Header({ placeholder }) {
                                 className="w-12 pl-2 text-lg outline-none text-red-400" />
                             </div>
                             <div className="flex">
-                                <button onClick={resetInput} className="flex-grow text-gray-500">
+                                <button onClick={resetInput} className=" overflow-hidden flex-grow bg-black text-gray-500">
                                     Chancel
                                 </button>
-                                <button onClick={search} className="flex-grow text-red-400">
+                                <button onClick={search} className=" overflow-hidden flex-grow bg-red-400 text-white">
                                     Search
                                 </button>
                             </div>
