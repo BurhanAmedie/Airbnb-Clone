@@ -5,8 +5,11 @@ import SmallCard from '../components/SmallCard'
 import MediumCard from '../components/MediumCard'
 import LargeCard from '../components/LargeCard'
 import Footer from '../components/Footer'
+import { Carousel } from "react-responsive-carousel"
 
-export default function Home({exploreData, cardsData}) {
+
+export default function Home({exploreData, cardsData, searchResults}) {
+  console.log(searchResults)
   return (
     <div >
       <Head>
@@ -51,11 +54,36 @@ export default function Home({exploreData, cardsData}) {
                     ))}
                   </div>
                 </section>
-                <LargeCard
+                <Carousel
+                autoPlay
+                infiniteLoop
+                showStatus={false}
+                showIndicators={false}
+                showThumbs={false}
+                interval={4500}>
+                  <LargeCard
                 img= 'https://links.papareact.com/4cj' 
                 title='The Greatest Outdoors'
                 description="Wishlists curated by Airbnb" 
                 buttonText="Get Inspired"/>
+                <LargeCard
+                img= "https://links.papareact.com/xqj" 
+                title='The Greatest Outdoors'
+                description="Wishlists curated by Airbnb" 
+                buttonText="Get Inspired"/>
+                <LargeCard
+                img= "https://links.papareact.com/hz2" 
+                title='The Greatest Outdoors'
+                description="Wishlists curated by Airbnb" 
+                buttonText="Get Inspired"/>
+                <LargeCard
+                img= "https://links.papareact.com/pro" 
+                title='The Greatest Outdoors'
+                description="Wishlists curated by Airbnb" 
+                buttonText="Get Inspired"/>
+                  
+                </Carousel>
+                
             </main >
           </div>
           
@@ -74,6 +102,7 @@ export default function Home({exploreData, cardsData}) {
     </div>
   )
 }
+
 
 export async function getStaticProps() {
   const exploreData = await fetch('https://links.papareact.com/pyp').then(

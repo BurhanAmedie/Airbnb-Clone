@@ -10,7 +10,6 @@ import { motion } from "framer-motion"
 
 function Map({ searchResults }) {
 
-    console.log(searchResults)
     const [SelectedLocation, setSelectedLocation] = useState({})
 
     // Transform the search Result object into an object
